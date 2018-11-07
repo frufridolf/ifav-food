@@ -1,13 +1,11 @@
 import * as React from "react";
-import { Checkbox } from "react-bootstrap";
 
-
-export class ClassifyCheckbox extends React.Component{
-    render() {
-        return (
+export const classifyCheckbox = (props)=> {
+ 
+    return (
         <div>
-             <label>Nyttigt/Onyttigt<Checkbox checked></Checkbox> </label>
-
-        </div>)
-};
+            <label>Nyttigt</label>
+            <input id="isHealty" type="checkbox" checked={props.isHealty} onChange={props.updateClassification}/>
+        </div>
+    )
 }

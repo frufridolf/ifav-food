@@ -1,64 +1,22 @@
-
-
 import * as React from "react";
-import { Checkbox, Grid, Row, Col } from "react-bootstrap";
 
+export const categorySelect = ({updateCategory,chosenCategory})=> {
+    const handleChange =(event) => {
+       updateCategory(event.currentTarget.value);
 
-export class CategorySelect extends React.Component{
-    state={
-        isHealthy: true,
-        optionSelect: ""
-    };
-    handleChange = (event) => {
-        this.setState({isHealthy: !this.state.isHealthy});
-        
-    };
-    selectCategory =(event) => {
-        this.setState({optionSelect: event.currentTarget.value})
-       
     }
-    render() {
-        return (
+    let selectedCategory = chosenCategory || "";
+    return (
         <div>
-            <Grid>
-                <Row>
-                    <Col md={2}><label>Kategory</label></Col>
-                
-                    <Col >
-                        <label htmlFor={this.id}>Nyttigt?</label>
-                        
-                        
-                    </Col>
-                 </Row>
-                 <Row>
-                    <Col md={2}>
-                        <select value={this.state.optionSelect} onChange={event => {this.selectCategory(event)}}>
-                        <option value="Middag">Middag</option>
-                        <option value="Lunch">Lunch</option>
-                        <option value="Mellanmål">Mellanmål</option>
-                        <option value="Frukost">Frukost</option>
-                        </select>
-                    </Col>
-                
-                    <Col> 
-                        <input onChange={this.handleChange} id={this.id} type="checkbox" 
-                        checked={this.state.isHealthy} />
-                        
-                    </Col>
-                 </Row>
-                 <Row><Col>vald:{this.state.optionSelect} </Col></Row>
-                 
-                
-            </Grid>
-            <div>
-                
-            </div>
-            <div>
-               
-               
-            </div>
-
+            <label>Välj kategori</label>
+            <select value={selectedCategory} onChange={(event) => handleChange(event)}>
+            <option value="">Välj</option>
+                <option value="Frukost">Frukost</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Mellanmål">Mellanmål</option>
+                <option value="Middag">Middag</option>
+            </select>
         </div>
-        )
-};
+    )
 }
+
