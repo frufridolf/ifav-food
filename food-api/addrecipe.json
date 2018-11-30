@@ -1,0 +1,21 @@
+{"Category":"Middag",
+  "IsHealty":"healty",
+  "Classification":"Fågel",
+  "HeadIngredient":"kyckling",
+  "Ingredients":[
+            {
+                "Ingredient":"kycklingfile",
+                "Quantity": 4,
+                "Unit":"st"
+            },
+            {
+                "Ingredient":"lök" ,
+                "Quantity":1,
+                "Unit": "st"
+            }
+        ],
+        "Instructions":[
+            "stek kyclingen",
+            "hacka löken"
+        ]
+    }

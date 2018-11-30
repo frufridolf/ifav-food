@@ -1,0 +1,19 @@
+{
+  "name": "food-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.18.6"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.3.13",
+    "prettify": "^0.1.7"
+  }
+}
