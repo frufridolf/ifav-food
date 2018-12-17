@@ -2,7 +2,9 @@
 var mongoose = require('mongoose'),
 Recipe = mongoose.model('Recipes');
 
+
 exports.recipes = function(req, res) {
+  console.log('in recipeController get');
     Recipe.find({}, function(err, recipes) {
       if (err)
         res.send(err);
